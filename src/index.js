@@ -4,6 +4,7 @@
 // import CommentDetail from "./commentDetail";
 // import ApprovalCard from "./ApprovalCard";
 
+console.log("I miss JAVASCRIT")
 // const App = () => {
 //   let dateObj = new Date().getHours() + ":" + new Date().getMinutes();
 //   return (
@@ -61,6 +62,7 @@ class App extends React.Component {
       }
     );
   }
+  
   render() {
     if (this.state.errorMessage != "") {
       return <div>{this.state.errorMessage}</div>;
