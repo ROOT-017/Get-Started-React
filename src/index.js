@@ -4,7 +4,6 @@
 // import CommentDetail from "./commentDetail";
 // import ApprovalCard from "./ApprovalCard";
 
-console.log("I miss JAVASCRIT")
 // const App = () => {
 //   let dateObj = new Date().getHours() + ":" + new Date().getMinutes();
 //   return (
@@ -39,43 +38,43 @@ console.log("I miss JAVASCRIT")
 // Take the react component and show on the browser
 
 // ReactDOM.render(<App />, document.querySelector("#root"));
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import SeasonDisplay from "./SeasonDisplay";
+// import Spinner from "./spinner";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { lat: null, long: null, errorMessage: "" };
-    window.navigator.geolocation.getCurrentPosition(
-      (postion) => {
-        this.setState({
-          lat: postion.coords.latitude,
-          long: postion.coords.longitude,
-        });
-      },
-      (err) => {
-        console.log(err)
-        this.setState({
-          errorCode: err.code,
-          errorMessage: err.message,
-        });
-      }
-    );
-  }
-  
-  render() {
-    if (this.state.errorMessage != "") {
-      return <div>{this.state.errorMessage}</div>;
-    } else if (this.state.errorMessage == "" && this.state.lat == null) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-        <div>
-          <div>Latitude:{this.state.lat}</div>
-          <div>Longitude:{this.state.long}</div>
-        </div>
-      );
-    }
-  }
-}
-ReactDOM.render(<App />, document.querySelector("#root"));
+// class App extends React.Component {
+//   // constructor(props) {
+//   //   super(props);
+//   //   this.state = { lat: null, errorMessage: "" };
+
+//   // }
+//   state = { lat: null, errorMessage: "" };
+
+//   componentDidMount() {
+//     window.navigator.geolocation.getCurrentPosition(
+//       (postion) => {
+//         this.setState({ lat: postion.coords.latitude });
+//       },
+//       (err) => {
+//         this.setState({ errorMessage: err.message });
+//       }
+//     );
+//   }
+//   renderContent() {
+//     if (this.state.errorMessage != "") {
+//       return <div>{this.state.errorMessage}</div>;
+//     } else if (this.state.errorMessage == "" && this.state.lat != null) {
+//       return <SeasonDisplay lat={this.state.lat} />;
+//     } else {
+//       return <Spinner message="Please allow us to access your location..." />;
+//     }
+//   }
+
+//   render() {
+//     return <div className="border red">{this.renderContent()}</div>;
+//   }
+// }
+// ReactDOM.render(<App />, document.querySelector("#root"));
+
+
